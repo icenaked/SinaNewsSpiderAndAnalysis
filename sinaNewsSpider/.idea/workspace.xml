@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3a3e27d2-c7fa-4274-a078-a70c009948be" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="3a3e27d2-c7fa-4274-a078-a70c009948be" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,7 +15,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1nH36hScliMlEfnDza2EUkQhfQS" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -28,10 +26,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="D:/Program Files (x86)/python" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.spider">
+  <component name="RunManager" selected="Python.singleSpider">
     <configuration name="singleSpider" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="singleSpider" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -97,9 +95,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.singleSpider" />
         <item itemvalue="Python.spider" />
         <item itemvalue="Python.test" />
-        <item itemvalue="Python.singleSpider" />
       </list>
     </recent_temporary>
   </component>
@@ -117,26 +115,46 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1513" height="323" key="GridCell.Tab.0.bottom" timestamp="1611067684565">
+    <state x="679" y="178" key="FileChooserDialogImpl" timestamp="1611115693919">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1513" height="323" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1611067684565" />
-    <state width="1513" height="323" key="GridCell.Tab.0.center" timestamp="1611067684565">
+    <state x="679" y="178" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1611115693919" />
+    <state width="1515" height="334" key="GridCell.Tab.0.bottom" timestamp="1611123368715">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1513" height="323" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1611067684565" />
-    <state width="1513" height="323" key="GridCell.Tab.0.left" timestamp="1611067684564">
+    <state width="1515" height="334" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1611123368715" />
+    <state width="1515" height="334" key="GridCell.Tab.0.center" timestamp="1611123368715">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1513" height="323" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1611067684564" />
-    <state width="1513" height="323" key="GridCell.Tab.0.right" timestamp="1611067684565">
+    <state width="1515" height="334" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1611123368715" />
+    <state width="1515" height="334" key="GridCell.Tab.0.left" timestamp="1611123368715">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1513" height="323" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1611067684565" />
-    <state x="270" y="59" key="SettingsEditor" timestamp="1611049935663">
+    <state width="1515" height="334" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1611123368715" />
+    <state width="1515" height="334" key="GridCell.Tab.0.right" timestamp="1611123368715">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="270" y="59" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1611049935663" />
+    <state width="1515" height="334" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1611123368715" />
+    <state width="1515" height="265" key="GridCell.Tab.1.bottom" timestamp="1611122895606">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1515" height="265" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1611122895606" />
+    <state width="1515" height="265" key="GridCell.Tab.1.center" timestamp="1611122895606">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1515" height="265" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1611122895606" />
+    <state width="1515" height="265" key="GridCell.Tab.1.left" timestamp="1611122895606">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1515" height="265" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1611122895606" />
+    <state width="1515" height="265" key="GridCell.Tab.1.right" timestamp="1611122895606">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1515" height="265" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1611122895606" />
+    <state x="400" y="65" key="SettingsEditor" timestamp="1611113401092">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="400" y="65" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1611113401092" />
     <state x="0" y="0" key="com.intellij.ide.util.TipDialog" timestamp="1611067787447">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

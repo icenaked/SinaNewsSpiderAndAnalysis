@@ -1,74 +1,40 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sun Jun 23 09:35:12 2019
-@author: Administrator
-"""
-
-# 动态加载
 import requests
-import re
+from bs4 import BeautifulSoup
+import  re
 import time
-
-import pandas as pd
-import requests
-import csv
-import numpy as np
-
-from urllib.parse import urlencode
-
-base_url = 'https://m.weibo.cn/api/container/getIndex?'
-
-#
-head = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0'}
-
-
-def get_page(con_id, page):
-    parames = {
-        "containerid": con_id,
-        "page_type": "03",
-        "page": page
-
-    }
-    # print(base_url + urlencode(parames))
-    time.sleep(2)
-    response = requests.get(base_url + urlencode(parames), headers=head)
-    # print(response.json())
-    return response.json()
-
-
-########3
-x = []
-m = 0
-for page in range(1601, 2000):
+url=[]
+for line in open(r"E:\Desktop\spider\urls.txt"):
+    url.append(line)
+n=0
+#url=['https://tech.sina.com.cn/d/f/2019-12-20/doc-iihnzhfz7124619.shtml','https://news.sina.com.cn/w/2019-12-03/doc-iihnzhfz3227337.shtml']
+#def do(line):
+p = re.compile('[\u4e00-\u9fa5]')
+for i in range(len(url)):
     try:
-        m = m + 1
-        print(m)
-        con_id = '1076031618051664'
-        res_json = get_page(con_id, page)
-        weibo_num = res_json['data']['cardlistInfo']['total']
-        id1 = res_json['data']['cards'][0]['mblog']['user']['id']
-        name = res_json['data']['cards'][0]['mblog']['user']['screen_name']
-
-        follow = res_json['data']['cards'][0]['mblog']['user']['follow_count']
-        follower = res_json['data']['cards'][0]['mblog']['user']['followers_count']
-        len1 = len(res_json['data']['cards'])
-        for i in range(len1):
-            id_tiezi = res_json['data']['cards'][i]['mblog']['id']
-            time1 = res_json['data']['cards'][i]['mblog']['created_at']
-            data = res_json['data']['cards'][i]['mblog']['text']
-            hanzi = ''.join(re.findall('[\u4e00-\u9fa5]', data))
-
-            comment_num = res_json['data']['cards'][i]['mblog']['comments_count']
-            zan = res_json['data']['cards'][i]['mblog']['attitudes_count']
-            zhuanfa = res_json['data']['cards'][i]['mblog']['reposts_count']
-            # print(id1, name, id_tiezi,time,hanzi, comment_num,zan, zhuanfa)
-            print(name, time1)
-            x.append([id1, name, weibo_num, follow, follower, id_tiezi, time1, hanzi, comment_num, zan, zhuanfa])
-        # with open('weibo.txt', 'a') as ff:
-        # ff.write(id1 + '\t' + name +'\t'+id_tiezi+'\t'+time+'\t'+hanzi+'\t'+c)
+        html = requests.get(url[i].replace('\n',''))
+        html.encoding = 'utf-8'
+        soup = BeautifulSoup(html.content, "html.parser")
+        date=soup.find_all('span',{'class':{'date'}})
+        title=soup.find_all('h1',{'class':{'main-title'}})
+        text=soup.find_all('p')
+        if len(date) > 0 and len(title) > 0 and len(text) > 0:
+            n = n + 1
+            res = re.findall(p, str(text))
+            hanzi = ''.join(res).replace('\n','')
+            # print(date[0].string)
+            # print(title[0].string)
+            # print(hanzi)
+            with open(r'E:\Desktop\spider\news.txt', 'a') as ff:
+                ff.write(date[0].string+' ')
+                ff.write(title[0].string + ' ')
+                ff.write(hanzi + '\n')
     except:
         None
-    c = pd.DataFrame(x)
-    c.columns = ['id1', 'name', 'weibo_num', 'follow', 'follower', 'id_tiezi', 'time', 'hanzi', 'comment_num', 'zan',
-                 'zhuanfa']
-    c.to_csv('toutiaoxinwen4.csv')
+    print(n)
+
+
+
+# if __name__ == '__main__':
+#     for line in open(r"E:\Desktop\spider\urls.txt"):
+#         print(line)
+#         do(url)
